@@ -10,8 +10,3 @@ resource "aws_s3_bucket" "bitbucket_s3_test" {
     Environment = "Dev"
   }
 }
-
-resource "aws_s3_bucket_acl" "example" {
-  bucket = aws_s3_bucket.bitbucket_s3_test.id
-  acl    = "private"
-}
