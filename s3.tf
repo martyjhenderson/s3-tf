@@ -1,12 +1,9 @@
-resource "random_pet" "bucket_name" {
+resource "random_pet" "bucket_name" {}
 
-}
-
-resource "aws_s3_bucket" "bitbucket_s3_test" {
-  bucket = "s3-test-bucket-${random_pet.bucket_name.id}"
-
+resource "aws_s3_bucket" "bitbucket_s3_demo" {
+  bucket = "s3-demo-bucket-${random_pet.bucket_name.id}"
   tags = {
     Client      = "BH"
-    Environment = "Dev"
+    Environment = "SBX"
   }
 }
